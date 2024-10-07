@@ -1,0 +1,32 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  font-family: 'MedievalSharp', cursive;
+}
+
+.health-bar {
+  @apply w-full bg-gray-300 rounded-full h-6 overflow-hidden;
+}
+
+.health-bar-fill {
+  @apply h-full text-center text-sm leading-6 text-white;
+}
+
+.player-health {
+  @apply bg-green-600;
+}
+
+.enemy-health {
+  @apply bg-red-600;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.defeated {
+  animation: fadeOut 1s ease-out;
+}
